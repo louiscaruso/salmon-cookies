@@ -7,11 +7,10 @@
   
   header{
     height: 400px;
-    font-size: x-large;
+    font-size: xx-large;
     margin-left: 10vw;
     margin-top: 10px;
     margin-right: 10vw;
-    
   }
   header > img{
     width: 10vw;
@@ -19,8 +18,6 @@
     margin-top: 1px;
     margin-right: 10vw;
     margin-bottom: 20px;
-  
-    
   }
   body{
     text-align: center;
@@ -30,11 +27,33 @@
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   header > nav > ul > li{
     display:inline;
-    text-decoration:salmon;
-    color: purple;
     margin-right: 15px;
+    
+  }
+   #sales > ul {
+    color: rgb(24, 24, 216);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+  }
+  .page-divider{
+    border: white solid 2px;
+  }
+  header > nav > ul > li > a{
+  text-decoration:rgb(207, 114, 250);
+  color:salmon;
+  }
+  h2{
+    font-size: x-large;
+    margin-bottom: 15px;
+  }
+  .page-divider2{
+    border: white solid 2px;
+    margin: 160px;
     
   }
