@@ -1,4 +1,4 @@
-#s1{
+ #s1{
   margin-top: 15px;
   height: 400px;
   margin-left: 10vw;
@@ -51,9 +51,36 @@
   h2{
     font-size: x-large;
     margin-bottom: 15px;
+    margin-top: 15px;
   }
   .page-divider2{
     border: white solid 2px;
     margin: 160px;
     
+  } 
+  h1 {
+    margin-bottom: 20px;
+  }
+.font-change{
+    margin-top: 15px;
+    height: 400px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-family: 'Annie Use Your Telescope';
+    margin-bottom: 30px;
+  }
+  .font-change2{
+    margin-top: 100px;
+    height: 400px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-family: 'Annie Use Your Telescope';
+    margin-bottom: 30px;
+  }
+  #cookies {
+    width: 30vw;
+    opacity: 0.80;
+  }
+  #text{
+    font-size: larger;
   }
