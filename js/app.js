@@ -19,11 +19,9 @@ function Shop(name, minCustomer, maxCustomer, avgCookieSale) {
   this.sales = [];
   this.dailyTotal = 0;
 }
-
 Shop.prototype.getRandomInteger = function (min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 };
-
 Shop.prototype.salesData = function () {
   var hourlyTotal = 0;
   for (var i = 0; i < hours.length; i++) {
@@ -33,7 +31,19 @@ Shop.prototype.salesData = function () {
     this.dailyTotal += hourlyTotal;
     // totalGrand += hourlyTotal;
     console.log(this.sales);
-
+  }
+};
+Shop.prototype.render = function () {
+  this.salesData();
+  var tableRow = document.createElement('tr');
+  var tableData = document.createElement('td');
+  tableData.textContent = this.name;
+  tableRow.appendChild(tableData);
+  table.appendChild(tableRow);
+  for (var i= 0; i < this.sales.length; i++){
+    var tableSales = document.createElement('td');
+    tableSales.textContent = this.sales[i];
+    tableRow.appendChild(tableSales);
   }
   var tableTotal = document.createElement('td');
   tableTotal.textContent = this.dailyTotal;
@@ -42,9 +52,9 @@ Shop.prototype.salesData = function () {
 };
 
 function calcTotal() {
-  for (var i = 0; i < hours.length; i++) {
+  for(var i = 0; i < hours.length; i++){
     var hourlyTotal = 0;
-    for (var j = 0; j < storeLocations.length; j++) {
+    for(var j = 0; j < storeLocations.length; j++){
       hourlyTotal += storeLocations[j].sales[i];
     }
     totalGrand += hourlyTotal;
@@ -58,7 +68,7 @@ function renderHead() {
   headStore.textContent = 'Store Locations';
   headRow.appendChild(headStore);
   table.appendChild(headRow);
-  for (var i = 0; i < hours.length; i++) {
+  for (var i=0; i < hours.length; i++){
     var headHours = document.createElement('th');
     headHours.textContent = hours[i];
     headRow.appendChild(headHours);
@@ -68,14 +78,14 @@ function renderHead() {
   headRow.appendChild(headTotal);
 }
 
-function renderFooter() {
+function renderFooter(){
   calcTotal();
   var tableRow = document.createElement('tr');
   var tableData = document.createElement('td');
   tableData.textContent = 'Total';
   tableRow.appendChild(tableData);
   table.appendChild(tableRow);
-  for (var i = 0; i < allHourlyTotalsArr.length; i++) {
+  for (var i= 0; i < allHourlyTotalsArr.length; i++){
     var tableSales = document.createElement('td');
     tableSales.textContent = allHourlyTotalsArr[i];
     tableRow.appendChild(tableSales);
@@ -94,29 +104,5 @@ dubai.render();
 seattle.render();
 renderFooter();
 
-function renderFooter() {
-  calcTotal();
-  var tableRow = document.createElement('tr');
-  var tableData = document.createElement('td');
-  tableData.textContent = 'Total';
-  tableRow.appendChild(tableData);
-  table.appendChild(tableRow);
-  for (var i = 0; i < allHourlyTotalsArr.length; i++) {
-    var tableSales = document.createElement('td');
-    tableSales.textContent = allHourlyTotalsArr[i];
-    tableRow.appendChild(tableSales);
-  }
-  var tableTotal = document.createElement('td');
-  tableTotal.textContent = totalGrand;
-  tableRow.appendChild(tableTotal);
-}
 
-renderHead();
-paris.render();
-lima.render();
-tokyo.render();
-dubai.render();
-seattle.render();
-renderFooter();
-console.log(totalGrand);
-console.log(allHourlyTotalsArr);
+
