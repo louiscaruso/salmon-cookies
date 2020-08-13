@@ -33,24 +33,12 @@ Shop.prototype.salesData = function () {
     this.dailyTotal += hourlyTotal;
     // totalGrand += hourlyTotal;
     console.log(this.sales);
-  }
-};
 
-Shop.prototype.render = function () {
-  this.salesData();
-  var tableRow = document.createElement('tr');
-  var tableData = document.createElement('td');
-  tableData.textContent = this.name;
-  tableRow.appendChild(tableData);
-  table.appendChild(tableRow);
-  for (var i= 0; i < this.sales.length; i++){
-    var tableSales = document.createElement('td');
-    tableSales.textContent = this.sales[i];
-    tableRow.appendChild(tableSales);
   }
   var tableTotal = document.createElement('td');
   tableTotal.textContent = this.dailyTotal;
   tableRow.appendChild(tableTotal);
+
 };
 
 function calcTotal() {
@@ -79,6 +67,32 @@ function renderHead() {
   headTotal.textContent = 'Location Total';
   headRow.appendChild(headTotal);
 }
+
+function renderFooter(){
+  calcTotal();
+  var tableRow = document.createElement('tr');
+  var tableData = document.createElement('td');
+  tableData.textContent = 'Total';
+  tableRow.appendChild(tableData);
+  table.appendChild(tableRow);
+  for (var i= 0; i < allHourlyTotalsArr.length; i++){
+    var tableSales = document.createElement('td');
+    tableSales.textContent = allHourlyTotalsArr[i];
+    tableRow.appendChild(tableSales);
+  }
+  var tableTotal = document.createElement('td');
+  tableTotal.textContent = totalGrand;
+  tableRow.appendChild(tableTotal);
+
+}
+
+renderHead();
+paris.render();
+lima.render();
+tokyo.render();
+dubai.render();
+seattle.render();
+renderFooter();
 
 function renderFooter(){
   calcTotal();
