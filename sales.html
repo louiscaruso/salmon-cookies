@@ -12,28 +12,36 @@
 
 <body>
   <header>
-    <h2>Page header goes here</h2>
+    <h1>Salmon Sales</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="sales.html">Sales</a></li>
+      </ul>
+      <div class="page-divider"></div>
+    </nav>
   </header>
-  <main id="sales">
-    <ul>
-      <li id="seattle">Seattle</li>
-    </ul>
-    <ul>
-      <li id="tokyo">Tokyo</li>
-    </ul>
-    <ul>
-      <li id="paris">Paris</li>
-    </ul>
-    <ul>
-      <li id="dubai">Dubai</li>
-    </ul>
-    <ul>
-      <li id="lima">Lima</li>
-    </ul>
+  <main>
+    <form id="container">
+      <fieldset>
+        <legend>Pat's way to add new stores</legend>
+        <label for="name">Enter New Store name:</label>
+        <input type="text" placeholder="store" name="name">
+        <label for="mincustomer">Min Customer:</label>
+        <input type="number" name="mincustomer">
+        <label for="maxcustomer">Max Customer:</label>
+        <input type="number" name="maxcustomer">
+        <label for="avgcookiesale">Average Cookie Sale</label>
+        <input type="number" name="avgcookiesale">
+        <button type="submit">Send</button>
+      </fieldset>
+    </form>
 
 
+    <table id="shop"></table>
+    <script src="js/app.js"></script>
   </main>
-  <script src="js/app.js"></script>
 </body>
 
 </html>
