@@ -10,8 +10,6 @@ new Shop('Paris', 20, 38, 2.3);
 new Shop('Lima', 2, 16, 4.6);
 new Shop('Dubai', 11, 38, 3.7);
 var allHourlyTotalsArr = [];
-//new shop arr
-// var newShop = [];
 var totalGrand = 0;
 
 function Shop(name, minCustomer, maxCustomer, avgCookieSale) {

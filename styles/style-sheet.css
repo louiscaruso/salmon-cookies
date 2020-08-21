@@ -51,11 +51,15 @@ header>nav>ul>li>a {
 }
 
 h2 {
-    font-size: x-large;
+    font-size: xx-large;
     margin-bottom: 15px;
     margin-top: 15px;
 }
-
+h3 {
+font-size: x-large;
+margin-bottom: 15px;
+margin-top: 15px;
+}
 .page-divider2 {
     border: white solid 2px;
     margin: 160px;
@@ -129,10 +133,12 @@ h1 {
 
 td {
     background-color: lightblue;
+    font-style: oblique;
 }
 
 th {
     background-color: lavender;
+    font-family: 'Roboto Mono';font-size: 18px;
 }
 
 table,
@@ -156,6 +162,19 @@ footer {
 }
 
 fieldset {
-    display: block;
+    display: inline-block;
     border: 1px solid black;
+    margin-top: 15px;
+
+}
+form {
+  padding: 20px;
+  border:3px solid salmon;
+  margin: 10px 10px 10px 10px;
+
+}
+
+input {
+  display: inline-block;
+  margin-bottom: 30px;
 }
